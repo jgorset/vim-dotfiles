@@ -51,10 +51,10 @@ set hidden
 " Don't wrap lines.
 set nowrap
 
-" A tab is 4 spaces.
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" A tab is 2 spaces.
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " Round indentation to multiples of shiftwidth when indenting.
@@ -75,3 +75,6 @@ map <right> <nop>
 
 " Display a list of completion alternatives.
 set wildmenu
+
+" Allow deleting anything with backspace
+set backspace=indent,eol,start
