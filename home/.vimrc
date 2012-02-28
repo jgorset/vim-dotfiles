@@ -73,4 +73,5 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-
+" Display a list of completion alternatives.
+set wildmenu
