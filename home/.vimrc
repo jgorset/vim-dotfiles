@@ -28,7 +28,7 @@ set scrolloff=3
 set number
 
 " Set color scheme
-colorscheme grb256
+colorscheme busybee
 
 " Enable syntax highlighting
 syntax on
