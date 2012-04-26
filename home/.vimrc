@@ -78,3 +78,10 @@ set wildmenu
 
 " Allow deleting anything with backspace
 set backspace=indent,eol,start
+
+" Flush Command T upon writing to a file and gaining focus.
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
