@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/jgorset/code/python/libraries/fandjango/fandjango'
-let g:netrw_dirhist_2='/Users/jgorset/code/python/libraries/fandjango'
-let g:netrw_dirhist_3='/Users/jgorset/code/python/libraries/fandjango/docs'
-let g:netrw_dirhist_4='/Users/administrator/code/ruby/rails/naf-barnasnaf/code/app'
-let g:netrw_dirhist_5='/Users/administrator/code/ruby/rails/naf-barnasnaf/code/app/models'
