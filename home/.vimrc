@@ -85,6 +85,9 @@ set laststatus=2
 " Customize the status line
 set statusline=%f\ (%{&fenc})%=\ %l/%L
 
+" Use fancy powerline symbols
+let g:Powerline_symbols = 'fancy'
+
 " Flush Command T upon writing to a file and gaining focus.
 augroup CommandTExtension
   autocmd!
