@@ -76,8 +76,14 @@ map <right> <nop>
 " Display a list of completion alternatives.
 set wildmenu
 
-" Allow deleting anything with backspace
+" Allow deleting anything with backspace.
 set backspace=indent,eol,start
+
+" Always show the status line.
+set laststatus=2
+
+" Customize the status line
+set statusline=%f\ (%{&fenc})%=\ %l/%L
 
 " Flush Command T upon writing to a file and gaining focus.
 augroup CommandTExtension
