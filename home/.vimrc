@@ -67,6 +67,9 @@ set copyindent
 " Show search matches as you type.
 set incsearch
 
+" Set default encoding
+set encoding=utf-8
+
 " Disable the arrow keys. You'll thank me later.
 map <up> <nop>
 map <down> <nop>
