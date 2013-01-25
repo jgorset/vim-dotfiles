@@ -21,9 +21,6 @@ set title
 set nobackup
 set noswapfile
 
-" Work with the system clipboard
-set clipboard=unnamed
-
 " Maintain at least 3 lines worth of context around the cursor.
 set scrolloff=3
 
