@@ -103,3 +103,6 @@ augroup CommandTExtension
   autocmd FocusGained * CommandTFlush
   autocmd BufWritePost * CommandTFlush
 augroup END
+
+" Navigate open buffers
+nmap <Space> :e#<Return>
