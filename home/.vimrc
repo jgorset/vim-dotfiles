@@ -91,6 +91,12 @@ set statusline=%f\ (%{&fenc})%=\ %l/%L
 " Use fancy powerline symbols
 let g:Powerline_symbols = 'fancy'
 
+" Copy gist URL to clipboard
+let g:gist_clip_command = 'pbcopy'
+
+" Detect the gist filetype from the filename
+let g:gist_detect_filetype = 1
+
 " Flush Command T upon writing to a file and gaining focus.
 augroup CommandTExtension
   autocmd!
