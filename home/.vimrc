@@ -43,7 +43,7 @@ call pathogen#infect()
 
 " Quickly edit and source ~/.vimrc.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Allow opening new files without writing changes first.
 set hidden
@@ -109,6 +109,9 @@ autocmd FileType ruby nmap <Leader>r :!ruby %<cr>
 
 " Navigate open buffers
 nmap <Space> :e#<Return>
+
+" Annotate code with xmpfilter (https://github.com/tnoda/rcodetools)
+map <silent> <Leader>a :%!xmpfilter -a --no-warnings<CR>
 
 " Don't highlight Git gutter's sign column
 highlight clear SignColumn
