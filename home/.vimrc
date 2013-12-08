@@ -104,6 +104,9 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
+" Convenience methods to run the current file
+autocmd FileType ruby nmap <Leader>r :!ruby %<cr>
+
 " Navigate open buffers
 nmap <Space> :e#<Return>
 
@@ -115,11 +118,11 @@ let g:gitgutter_sign_column_always = 1
 
 " Create directories upon writing buffers if needed
 function s:MkNonExDir(file, buf)
-    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-        let dir=fnamemodify(a:file, ':h')
-        if !isdirectory(dir)
-            call mkdir(dir, 'p')
-        endif
+  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+      let dir=fnamemodify(a:file, ':h')
+      if !isdirectory(dir)
+          call mkdir(dir, 'p')
+      endif
     endif
 endfunction
 augroup BWCCreateDir
