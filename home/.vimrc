@@ -12,7 +12,7 @@ set history=1000
 set undolevels=1000
 
 " Ignore some files when autocompleting.
-set wildignore=*.swp,*.pyc,*.class
+set wildignore=*.swp,*.pyc,*.class,spec/tmp
 
 " Change the terminal's title.
 set title
