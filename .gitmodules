@@ -16,3 +16,6 @@
 [submodule "home/.vim/bundle/html5-vim"]
 	path = home/.vim/bundle/html5-vim
 	url = https://github.com/othree/html5.vim.git
+[submodule "home/.vim/bundle/splitjoin"]
+	path = home/.vim/bundle/splitjoin
+	url = git://github.com/AndrewRadev/splitjoin.vim.git

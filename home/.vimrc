@@ -83,6 +83,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Remap splitjoin.
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
+
 " Open new splits below below or right of the current split
 " instead of above or to the left of it
 set splitbelow
