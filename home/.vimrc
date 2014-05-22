@@ -76,6 +76,13 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Navigate splits with just Ctrl+hjkl instead of
+" Ctrl+w and then hjkl.
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Display a list of completion alternatives.
 set wildmenu
 
