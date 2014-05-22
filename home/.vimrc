@@ -116,6 +116,9 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
+" Alias CommandTFlush to CTF
+command CTF CommandTFlush
+
 " Convenience methods to run the current file
 autocmd FileType ruby nmap <Leader>r :!ruby %<cr>
 
