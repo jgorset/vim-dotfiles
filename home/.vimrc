@@ -98,6 +98,10 @@ set wildmenu
 " Allow deleting anything with backspace.
 set backspace=indent,eol,start
 
+" Highlight customization
+hi CursorLine cterm=NONE ctermfg=NONE ctermbg=236
+hi Directory cterm=NONE ctermfg=white ctermbg=NONE
+
 " Always show the status line.
 set laststatus=2
 
@@ -128,6 +132,12 @@ autocmd FileType ruby nmap <Leader>r :!ruby %<cr>
 
 " Navigate open buffers
 nmap <Space> :e#<Return>
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.git$','\.sass-cache$', '\.tmp$', '\~$', '\.DS_Store']
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
 
 " Annotate code with xmpfilter (https://github.com/tnoda/rcodetools)
 map <silent> <Leader>a :%!xmpfilter -a --no-warnings<CR>
