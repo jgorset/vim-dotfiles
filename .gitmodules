@@ -13,3 +13,9 @@
 [submodule "home/.vim/bundle/splitjoin"]
 	path = home/.vim/bundle/splitjoin
 	url = git://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "home/.vim/bundle/command-t"]
+	path = home/.vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "home/.vim/bundle/lightline.vim"]
+	path = home/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
