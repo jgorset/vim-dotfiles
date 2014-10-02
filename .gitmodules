@@ -19,3 +19,6 @@
 [submodule "home/.vim/bundle/lightline.vim"]
 	path = home/.vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "home/.vim/bundle/vim-kangaroo"]
+	path = home/.vim/bundle/vim-kangaroo
+	url = git://github.com/tommcdo/vim-kangaroo.git
