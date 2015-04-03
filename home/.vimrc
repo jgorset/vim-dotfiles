@@ -1,3 +1,28 @@
+" Required by Vundle
+set nocompatible
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sotte/presenting.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'wincent/command-t'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
 " Jump to the marked line and column on ', and only the marked line on `.
 nnoremap ' `
 nnoremap ` '
@@ -34,12 +59,7 @@ colorscheme busybee
 syntax on
 
 " Load plugins and indentation preferences based on file type.
-filetype on
-filetype plugin on
-filetype indent on
-
-" Initialize pathogen.
-call pathogen#infect()
+filetype plugin indent on
 
 " Quickly edit and source ~/.vimrc.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
