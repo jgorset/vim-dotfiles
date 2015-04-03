@@ -22,3 +22,6 @@
 [submodule "home/.vim/bundle/vim-kangaroo"]
 	path = home/.vim/bundle/vim-kangaroo
 	url = git://github.com/tommcdo/vim-kangaroo.git
+[submodule "home/.vim/bundle/presenting.vim"]
+	path = home/.vim/bundle/presenting.vim
+	url = https://github.com/sotte/presenting.vim.git
