@@ -19,6 +19,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'wincent/command-t'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'junegunn/goyo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -37,7 +39,7 @@ set history=1000
 set undolevels=1000
 
 " Ignore some files when autocompleting.
-set wildignore=*.swp,*.pyc,*.class,spec/tmp
+set wildignore=*.swp,*.pyc,*.class,*.xcodeproj,*.xcassets,*.lproj,node_modules,spec/tmp
 
 " Change the terminal's title.
 set title
@@ -51,6 +53,9 @@ set scrolloff=3
 
 " Show line numbers
 set number
+
+" Automatically read changed files
+set autoread
 
 " Set color scheme
 colorscheme busybee
@@ -131,6 +136,9 @@ set statusline=%f\ (%{&fenc})%=\ %l/%L
 " Copy gist URL to clipboard
 let g:gist_clip_command = 'pbcopy'
 
+" Set the default register to be the system clipboard
+set clipboard=unnamed
+
 " Detect the gist filetype from the filename
 let g:gist_detect_filetype = 1
 
@@ -139,6 +147,9 @@ command CTF CommandTFlush
 
 " Navigate open buffers
 nmap <Space> :e#<Return>
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
