@@ -21,7 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'rking/ag.vim'
@@ -73,6 +73,9 @@ filetype plugin indent on
 " Quickly edit and source ~/.vimrc.
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Map CtrlP to <leader>t
+let g:ctrlp_map = '<leader>t'
 
 " Allow opening new files without writing changes first.
 set hidden
