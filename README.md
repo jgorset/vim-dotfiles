@@ -11,3 +11,10 @@ yourself the trouble:
     $ homesick clone jgorset/vim-dotfiles
     $ homesick symlink jgorset/vim-dotfiles
 
+Set up [Vundle](https://github.com/VundleVim/Vundle.vim):
+
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Launch VIM and run `:PluginInstall`.
