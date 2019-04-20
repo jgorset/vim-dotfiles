@@ -1,5 +1,5 @@
 " Required by Vundle
-set nocompatible
+
 filetype off
 
 " Set the runtime path to include Vundle and initialize
@@ -25,6 +25,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'rking/ag.vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'mike-hearn/base16-vim-lightline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -61,8 +63,32 @@ set number
 " Automatically read changed files
 set autoread
 
-" Set color scheme
-colorscheme busybee
+" Set lightline options
+let g:lightline = {
+      \ 'colorscheme': 'base16_eighties',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'directory', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ] ]
+      \ },
+      \ 'component_function': {
+      \   'directory': 'LightLineDirectory'
+      \ }
+      \ }
+
+function! LightLineDirectory()
+  return expand('%:h')
+endfunction
+
+" Synchronize vim colorscheme with base16-shell
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Lightline already displays modes, so don't mirror it in vim
+set noshowmode
 
 " Enable syntax highlighting
 syntax on
