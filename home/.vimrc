@@ -1,16 +1,15 @@
 " Required by Vundle
-
+set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Use chruby
-set shell=$SHELL
+set shell=/bin/bash
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
@@ -27,6 +26,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'rking/ag.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mike-hearn/base16-vim-lightline'
+Plugin 'dag/vim-fish'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -72,13 +73,17 @@ let g:lightline = {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ] ]
       \ },
+      \ 'component': {
+      \   'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}',
+      \   'percent': '  %3p%% ', 'filename': '  %t'
+      \ },
       \ 'component_function': {
       \   'directory': 'LightLineDirectory'
       \ }
       \ }
 
 function! LightLineDirectory()
-  return expand('%:h')
+  return "  " . expand('%:h')
 endfunction
 
 " Synchronize vim colorscheme with base16-shell
@@ -170,7 +175,7 @@ set statusline=%f\ (%{&fenc})%=\ %l/%L
 let g:gist_clip_command = 'pbcopy'
 
 " Set the default register to be the system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Detect the gist filetype from the filename
 let g:gist_detect_filetype = 1
@@ -189,6 +194,10 @@ map <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.git$','\.sass-cache$', '\.tmp$', '\~$', '\.DS_Store']
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = '    '
+let g:NERDTreeDirArrowCollapsible = '    '
 
 " Annotate code with xmpfilter (https://github.com/tnoda/rcodetools)
 map <silent> <Leader>a :%!xmpfilter -a --no-warnings<CR>
