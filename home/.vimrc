@@ -79,7 +79,9 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'directory': 'LightLineDirectory'
-      \ }
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 function! LightLineDirectory()
