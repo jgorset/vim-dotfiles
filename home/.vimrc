@@ -28,6 +28,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mike-hearn/base16-vim-lightline'
 Plugin 'dag/vim-fish'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'smerrill/vcl-vim-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
