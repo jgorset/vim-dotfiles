@@ -1,5 +1,6 @@
 " Required by Vundle
 set nocompatible
+set encoding=utf-8
 filetype off
 
 " Set the runtime path to include Vundle and initialize
@@ -131,6 +132,9 @@ set shiftround
 set autoindent
 set copyindent
 
+" NERDTree and devicons
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
 " Show search matches as you type.
 set incsearch
 
@@ -210,8 +214,8 @@ highlight clear SignColumn
 " Git cutter
 set signcolumn=yes
 set updatetime=100
-nmap <C-j> <Plug>GitGutterNextHunk
-nmap <C-k> <Plug>GitGutterPrevHunk
+nmap <Leader>j <Plug>GitGutterNextHunk
+nmap <Leader>k <Plug>GitGutterPrevHunk
 
 " Create directories upon writing buffers if needed
 function s:MkNonExDir(file, buf)
