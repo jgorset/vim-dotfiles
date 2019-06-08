@@ -76,11 +76,13 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}',
-      \   'percent': '  %3p%% ', 'filename': '  %t'
+      \   'percent': '  %3p%% ', 'filename': '  %t '
       \ },
       \ 'component_function': {
       \   'directory': 'LightLineDirectory'
-      \ }
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 function! LightLineDirectory()
