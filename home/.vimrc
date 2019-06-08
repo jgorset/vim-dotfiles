@@ -28,6 +28,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mike-hearn/base16-vim-lightline'
 Plugin 'dag/vim-fish'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -196,10 +197,8 @@ map <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.git$','\.sass-cache$', '\.tmp$', '\~$', '\.DS_Store']
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
-" let g:NERDTreeDirArrowExpandable = ''
-" let g:NERDTreeDirArrowCollapsible = ''
-let g:NERDTreeDirArrowExpandable = '    '
-let g:NERDTreeDirArrowCollapsible = '    '
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " Annotate code with xmpfilter (https://github.com/tnoda/rcodetools)
 map <silent> <Leader>a :%!xmpfilter -a --no-warnings<CR>
@@ -207,8 +206,11 @@ map <silent> <Leader>a :%!xmpfilter -a --no-warnings<CR>
 " Don't highlight Git gutter's sign column
 highlight clear SignColumn
 
-" Always show Git gutter
-let g:gitgutter_sign_column_always = 1
+" Git cutter
+set signcolumn=yes
+set updatetime=100
+nmap <C-j> <Plug>GitGutterNextHunk
+nmap <C-k> <Plug>GitGutterPrevHunk
 
 " Create directories upon writing buffers if needed
 function s:MkNonExDir(file, buf)
