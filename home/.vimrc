@@ -31,6 +31,7 @@ Plugin 'dag/vim-fish'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'smerrill/vcl-vim-plugin'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
